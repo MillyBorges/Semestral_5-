@@ -1,0 +1,382 @@
+
+
+  /* =========================
+     Conteúdo Principal
+     ========================= */
+  .main {
+    flex: 1;
+    background-color: #FFF9E8;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(21, 54, 5, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  /* Boxes */
+  .box {
+    background: #ebe1c6;
+    border: 2px solid #74A65D;
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 220px;
+    box-shadow: 0 2px 6px rgba(116, 166, 93, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(116, 166, 93, 0.4);
+    border-color: #5a7b44;
+  }
+  
+  .box h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #517c50;
+  }
+  
+  /* =========================
+     Top 3 Leitores
+     ========================= */
+  .top3-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .top3-card {
+    background: #ebe1c6;
+    border: 2px solid #74A65D;
+    border-radius: 12px;
+    padding: 15px;
+    width: 140px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(116, 166, 93, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .top3-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(116, 166, 93, 0.5);
+  }
+  
+  .top3-card .trophy {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .top3-card .position {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #517c50;
+  }
+  
+  .top3-card .name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 3px;
+    color: #2c2c2c;
+  }
+  
+  .top3-card .points {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .top3-card.gold { border-top: 5px solid #FFD700; }
+  .top3-card.silver { border-top: 5px solid #C0C0C0; }
+  .top3-card.bronze { border-top: 5px solid #CD7F32; }
+  
+  /* =========================
+     Comunidade - Comentários
+     ========================= */
+  .comments-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .comment {
+    background: #FFF9E8;
+    border: 1.5px solid #74A65D;
+    border-radius: 12px;
+    padding: 12px 15px;
+    box-shadow: 0 2px 6px rgba(116, 166, 93, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .comment:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(116, 166, 93, 0.3);
+  }
+  
+  .comment-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .comment-user img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #74A65D;
+  }
+  
+  .comment-user span {
+    font-weight: 600;
+    color: #517c50;
+  }
+  
+  .comment p {
+    font-size: 14px;
+    color: #2c2c2c;
+    line-height: 1.4;
+    margin-left: 45px;
+  }
+  
+  /* Campo para adicionar comentário */
+  .add-comment {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .add-comment input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1.5px solid #74A65D;
+    border-radius: 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .add-comment input:focus {
+    border-color: #5a7b44;
+    box-shadow: 0 0 6px rgba(116, 166, 93, 0.3);
+  }
+  
+  .add-comment button {
+    background-color: #74A65D;
+    color: #FFF9E8;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .add-comment button:hover {
+    background-color: #5a7b44;
+    transform: translateY(-2px);
+  }
+  
+  /* =========================
+     Botão de chat
+     ========================= */
+  .chat-btn {
+    position: fixed;
+    bottom: 120px;
+    right: 25px;
+    background-color: #74A65D;
+    color: white;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 18px; /* Tamanho do ícone igual ao anterior */
+    box-shadow: 0 8px 20px rgba(116, 166, 93, 0.6);
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-btn:hover {
+    background-color: #5a7b44;
+    /* Removido transform exagerado para ficar igual ao antigo */
+  }
+  
+  /* =========================
+     Rodapé
+     ========================= */
+  footer {
+    background-color: #FFF9E8;
+    padding: 15px 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #74A65D;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-shrink: 0;
+  }
+  
+  footer div:hover {
+    color: #F2AF5C;
+    cursor: pointer;
+  }
+  
+  /* =========================
+     Animações
+     ========================= */
+  .box, .sidebar, header {
+    animation: fadeInUp 0.8s ease;
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* =========================
+     Responsividade
+     ========================= */
+  @media (max-width: 768px) {
+    body {
+      padding: 10px;
+    }
+    .container {
+      flex-direction: column;
+    }
+    .sidebar {
+      flex-direction: row;
+      width: 100%;
+      position: relative;
+      top: 0;
+    }
+    .main {
+      padding: 20px 10px;
+    }
+    footer {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  /* Card de chat principal */
+.chat-card {
+  position: fixed;
+  bottom: 195px;
+  right: 35px;
+  width: 330px;
+  max-width: 90vw;
+  background: #ebe1c6;
+  border: 2px solid #74A65D;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(116, 166, 93, 0.32);
+  display: none;
+  flex-direction: column;
+  animation: slideChatIn 0.4s cubic-bezier(.66,-0.02,.41,1.01);
+  z-index: 1001;
+}
+
+/* Cabeçalho do chat */
+.chat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #A9F6F6, #74A65D);
+  border-radius: 16px 16px 0 0;
+  padding: 13px 18px 11px 20px;
+  color: #517c50;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.close-chat {
+  background: none;
+  border: none;
+  color: #74A65D;
+  font-size: 22px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 7px;
+  transition: color 0.23s;
+}
+.close-chat:hover {
+  color: #F2AF5C;
+}
+
+.chat-card-messages {
+  flex: 1;
+  padding: 14px 20px;
+  max-height: 200px;
+  overflow-y: auto;
+  font-size: 15px;
+  color: #2c2c2c;
+}
+
+.chat-card-input {
+  display: flex;
+  gap: 8px;
+  padding: 13px 18px 15px 18px;
+  border-radius: 0 0 16px 16px;
+  background: #FFF9E8;
+}
+
+.chat-card-input input {
+  flex: 1;
+  padding: 8px 13px;
+  border: 1.5px solid #74A65D;
+  border-radius: 12px;
+  outline: none;
+  font-size: 15px;
+  transition: border-color 0.3s;
+}
+.chat-card-input input:focus {
+  border-color: #5a7b44;
+}
+
+.chat-card-input .send-chat {
+  background-color: #74A65D;
+  color: #FFF9E8;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+.chat-card-input .send-chat:hover {
+  background-color: #5a7b44;
+}
+
+/* Animação de entrada do card */
+@keyframes slideChatIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.93);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Animação de saída opcional */
+@keyframes slideChatOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(40px) scale(0.93);
+  }
+}
+
+

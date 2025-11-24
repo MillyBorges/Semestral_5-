@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="My 1st book.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../css/form.css"/>
+  <title>Questionário - My 1st Book</title>
+</head>
+<body>
+
+  <div class="questionario-container">
+
+    <!-- Pergunta 1 -->
+    <div class="pergunta tela ativa" id="pergunta1">
+      <h2>Qual é sua data de nascimento?</h2>
+      <input type="date" id="nascimento" />
+      <button class="proximo" data-next="pergunta2">Próximo</button>
+    </div>
+
+    <!-- Pergunta 2 -->
+    <div class="pergunta tela" id="pergunta2">
+      <h2>Qual das categorias de livros abaixo você se identifica mais?</h2>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="categoria" value="Fantasia" /> Fantasia</label>
+        <label><input type="checkbox" name="categoria" value="Romance" /> Romance</label>
+        <label><input type="checkbox" name="categoria" value="Terror" /> Terror</label>
+        <label><input type="checkbox" name="categoria" value="Quadrinhos" /> Quadrinhos</label>
+      </div>
+      <button class="proximo" data-next="pergunta3">Próximo</button>
+    </div>
+
+    <!-- Pergunta 3 -->
+    <div class="pergunta tela" id="pergunta3">
+      <h2>Você tem costume de ler?</h2>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="habito" value="Leio bastante" /> Leio bastante</label>
+        <label><input type="checkbox" name="habito" value="Não costumo ler muito" /> Não costumo ler muito</label>
+        <label><input type="checkbox" name="habito" value="Quero criar o hábito de ler" /> Quero criar o hábito de ler</label>
+      </div>
+      <button class="proximo" data-next="final">Próximo</button>
+    </div>
+
+    <!-- Tela final -->
+    <div class="pergunta tela" id="final">
+      <h2>Obrigado por responder!</h2>
+      <p>Suas respostas foram registradas com sucesso.</p>
+      <button onclick="window.location.href='../html/index.html'">Voltar para Login</button>
+    </div>
+
+  </div>
+
+  <script src="../js/form.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+/* =========================
+   Reset básico
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================
+   Corpo e Layout Principal
+   ========================= */
+body {
+  background: #FFF9E8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #2c2c2c;
+}
+
+/* Container principal */
+.container {
+  flex: 1;
+  display: flex;
+  max-width: 1200px;
+  width: 90vw;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+/* =========================
+   Cabeçalho
+   ========================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #A9F6F6, #74A65D);
+  padding: 10px 20px;
+  box-shadow: 0 5px 15px rgba(116, 166, 93, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* Logo */
+header .logo img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFF9E8;
+}
+
+/* Perfil */
+header .perfil img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFF9E8;
+}
+
+/* Navegação */
+header nav {
+  display: flex;
+  gap: 30px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #FFF9E8;
+  font-weight: 600;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #F2AF5C;
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background: #FFF9E8;
+  transition: width 0.3s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   Sidebar
+   ========================= */
+.sidebar {
+  position: fixed;
+  top: 93px;
+  left: 20px;
+  width: 70px;
+  height: 88vh;
+  background-color: #74A65D;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(116, 166, 93, 0.6);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar.expanded {
+  width: 220px;
+}
+
+.sidebar-top, .sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-top {
+  flex: 1;
+  justify-content: flex-start;
+  gap: 50px;
+}
+
+.sidebar-bottom {
+  justify-content: flex-end;
+  gap: 50px;
+}
+
+/* Itens */
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-item a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: inherit;
+}
+
+.sidebar-item i {
+  font-size: 24px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-item span {
+  color: white;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.expanded .sidebar-item span {
+  opacity: 1;
+}
+
+.sidebar-item:hover i {
+  transform: scale(1.3) rotate(-5deg);
+  filter: drop-shadow(2px 4px 6px rgba(255, 200, 0, 0.6));
+}
+
+.sidebar-item:hover span {
+  color: #F2AF5C;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+/* =========================
+   Conteúdo Principal
+   ========================= */
+.main {
+  flex: 1;
+  background-color: #FFF9E8;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(21, 54, 5, 0.35);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Boxes */
+.box {
+  background: #ebe1c6;
+  border: 2px solid #74A65D;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 220px;
+  box-shadow: 0 2px 6px rgba(116, 166, 93, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(116, 166, 93, 0.4);
+  border-color: #5a7b44;
+}
+
+.box h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #517c50;
+}
+
+/* =========================
+   Configuração - Inputs e Botão
+   ========================= */
+.config-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.config-item label {
+  font-weight: 600;
+  color: #517c50;
+  margin-right: 10px;
+  flex: 1;
+}
+
+.config-item input[type="text"],
+.config-item input[type="email"] {
+  flex: 2;
+  padding: 8px 12px;
+  border: 1.5px solid #74A65D;
+  border-radius: 12px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.config-item input[type="text"]:focus,
+.config-item input[type="email"]:focus {
+  border-color: #5a7b44;
+  box-shadow: 0 0 6px rgba(116, 166, 93, 0.3);
+}
+
+.config-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#salvar-config {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #74A65D;
+  color: #FFF9E8;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#salvar-config:hover {
+  background-color: #5a7b44;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Botão de chat
+   ========================= */
+.chat-btn {
+  position: fixed;
+  bottom: 120px;
+  right: 25px;
+  background-color: #74A65D;
+  color: white;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 8px 20px rgba(116, 166, 93, 0.6);
+  transition: background-color 0.3s ease;
+}
+
+.chat-btn:hover {
+  background-color: #5a7b44;
+}
+
+/* =========================
+   Rodapé
+   ========================= */
+footer {
+  background-color: #FFF9E8;
+  padding: 15px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #74A65D;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+footer div:hover {
+  color: #F2AF5C;
+  cursor: pointer;
+}
+
+/* =========================
+   Animações
+   ========================= */
+.box, .sidebar, header {
+  animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================
+   Responsividade
+   ========================= */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  .main {
+    padding: 20px 10px;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .config-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .config-item input[type="text"],
+  .config-item input[type="email"] {
+    width: 100%;
+  }
+  #salvar-config {
+    width: 100%;
+    text-align: center;
+  }
+}

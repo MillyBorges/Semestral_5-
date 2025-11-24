@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="My 1st book.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../css/editar.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/chatbot.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>My 1st Book - Editar</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="../html/home.html">
+                <img src="../assets/Images/android-chrome-512x512.png" alt="Logo My 1st Book" />
+            </a>
+        </div>
+
+        <nav>
+            <a href="minhasLeituras.html">Minhas Leituras</a>
+            <a href="minhaPontuacao.html">Minha Pontuação</a>
+            <a href="javascript:void(0)" onclick="window.location.href='../html/cadastroLivros.html'">Doe Livros</a>
+        </nav>
+
+        <div class="perfil">
+            <div id="loginUser"></div>
+            <a href="../html/perfil.html">
+                <img src="../assets/Images/harry-potter.png" alt="Perfil do Usuário" />
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-item">
+                    <a href="../html/minhasLeituras.html">
+                        <i class="fas fa-book"></i>
+                        <span class="item-text">Minhas Leituras</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="../html/minhaPontuacao.html">
+                        <i class="fas fa-trophy"></i>
+                        <span class="item-text">Pontuação</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="../html/cadastroLivros.html">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <span class="item-text">Doe Livros</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="amigos.html">
+                        <i class="fas fa-users"></i>
+                        <span class="item-text">Amigos</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="../html/carrinho.html">
+                        <i class="fas fa-cart-shopping"></i>
+                        <span class="item-text">Carrinho</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="../html/categorias.html">
+                        <i class="fas fa-layer-group"></i>
+                        <span class="item-text">Categoria</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-item">
+                    <a href="ajuda.html">
+                        <i class="fas fa-circle-question"></i>
+                        <span class="item-text">Ajuda</span>
+                    </a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="config.html">
+                        <i class="fas fa-cog"></i>
+                        <span class="item-text">Configurações</span>
+                    </a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="#" id="sair">
+                        <i class="fas fa-right-from-bracket"></i>
+                        <span class="item-text">Sair</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="editar-card">
+                <h2>Editar Livro</h2>
+                
+                <form id="form-editar">
+                    
+                    <div class="form-group">
+                        <label for="edit-titulo">Título</label>
+                        <input type="text" id="edit-titulo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-autor">Autor</label>
+                        <input type="text" id="edit-autor" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-categoria">Categoria</label>
+                        <input type="text" id="edit-categoria" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-imagem">URL da Imagem</label>
+                        <input type="text" id="edit-imagem">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-descricao">Descrição (Prévia)</label>
+                        <textarea id="edit-descricao" rows="4"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-editar">Salvar Alterações</button>
+                </form>
+            </div>
+        </main>
+
+    </div>
+
+    <footer class="footer">
+    <div class="footer-content">
+        <a href="#">Termos · Privacidade · Segurança</a>
+        <span class="separator">|</span>
+        <a href="#">Suporte</a>
+        <span class="separator">|</span>
+        <a href="#">Nos Apoie</a>
+    </div>
+</footer>
+
+    <script src="../js/editar.js"></script>
+    <script src="../js/global.js"></script>
+
+</body>
+</html>

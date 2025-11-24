@@ -1,0 +1,171 @@
+'
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="My 1st book.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/config.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/cadastroLivros.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>My 1st Book - Configurações</title>
+</head>
+
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <a href="../html/home.html">
+                <img src="../assets/Images/android-chrome-512x512.png" alt="Logo My 1st Book" />
+            </a>
+        </div>
+
+        <nav>
+            <a href="minhasLeituras.html">Minhas Leituras</a>
+            <a href="minhaPontuacao.html">Minha Pontuação</a>
+            <a href="javascript:void(0)" onclick="window.location.href='../html/cadastroLivros.html'">Doe Livros</a>
+        </nav>
+
+        <div class="perfil">
+            <a href="../html/perfil.html">
+                <img src="../assets/Images/harry-potter.png" alt="Perfil do Usuário" />
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Barra lateral -->
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-top">
+                <div class="sidebar-item">
+                    <a href="../html/minhasLeituras.html">
+                        <i class="fas fa-book"></i>
+                        <span class="item-text">Minhas Leituras</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="../html/minhaPontuacao.html">
+                        <i class="fas fa-trophy"></i>
+                        <span class="item-text">Pontuação</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="../html/cadastroLivros.html">
+                      <i class="fas fa-hand-holding-heart"></i>
+                      <span class="item-text">Doe Livros</span>
+                    </a>
+                </div>
+                  
+                <div class="sidebar-item">
+                    <a href="amigos.html">
+                        <i class="fas fa-users"></i>
+                        <span class="item-text">Amigos</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-item active">
+                    <a href="../html/carrinho.html">
+                        <i class="fas fa-cart-shopping"></i>
+                        <span class="item-text">Carrinho</span>
+                    </a>
+                </div>
+
+                <div class="sidebar-item">
+                    <a href="../html/categorias.html">
+                        <i class="fas fa-layer-group"></i>
+                        <span class="item-text">Categoria</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="sidebar-item">
+                    <a href="ajuda.html">
+                        <i class="fas fa-circle-question"></i>
+                        <span class="item-text">Ajuda</span>
+                    </a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="config.html">
+                        <i class="fas fa-cog"></i>
+                        <span class="item-text">Configurações</span>
+                    </a>
+                </div>
+                <div class="sidebar-item">
+                    <a href="#" id="sair">
+                         <i class="fas fa-right-from-bracket"></i>
+                        <span class="item-text">Sair</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    <div class="container">
+      <form id="bookForm" class="form-box" enctype="multipart/form-data" novalidate>
+        <h2>Cadastro de Livro</h2>
+
+        <label for="titulo">Título *</label>
+        <input type="text" id="titulo" name="titulo" required placeholder="Título do livro" />
+
+        <label for="autor">Autor *</label>
+        <input type="text" id="autor" name="autor" required placeholder="Nome do autor" />
+
+        <div class="input-group full-width">
+          <label for="categoria">Categoria *</label>
+          <select id="categoria" name="categoria" required>
+            <option value="" disabled selected>Selecione</option>
+            <option value="Romance">Romance</option>
+            <option value="Ficção">Ficção</option>
+            <option value="Terror">Terror</option>
+            <option value="Fantasia">Fantasia</option>
+            <option value="Quadrinhos">Quadrinhos</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+        
+        <label for="anoPublicacao">Ano de publicação *</label>
+        <input type="number" id="anoPublicacao" name="anoPublicacao" required placeholder="Ano de publicação" />
+
+        <label for="isbn">ISBN *</label>
+        <input type="text" id="isbn" name="isbn" required placeholder="ISBN do livro" />
+        <p class="isbn-info">
+          ISBN é a sigla para <i>International Standard Book Number</i>, um número padronizado internacionalmente que
+          identifica cada livro de forma única. Normalmente possui 13 dígitos e facilita a catalogação, venda e
+          identificação da obra em bibliotecas e livrarias.
+        </p>
+
+        <label for="capa">Capa (url) *</label>
+        <input type="text" id="capa" name="capa" accept="text" required />
+
+        <label for="classificacao">Classificação indicativa *</label>
+        <select id="classificacao" name="classificacao" required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="Livre">Livre</option>
+          <option value="10+">10+</option>
+          <option value="12+">12+</option>
+          <option value="14+">14+</option>
+          <option value="16+">16+</option>
+          <option value="18+">18+</option>
+        </select>
+
+        <label for="paginas">Quantidade de páginas *</label>
+        <input type="number" id="paginas" name="paginas" min="1" required placeholder="Número de páginas" />
+
+        <label for="previa">Prévia *</label>
+        <input type="text" id="previa" name="previa" accept="text" required />
+
+        <button type="button" id="cadastrar" class="btn-submit">Cadastrar</button>
+      </form>
+    </div>
+    <script src="../js/cadastroLivros.js"></script>
+    <script src="../js/global.js"></script>
+</body>
+
+</html>

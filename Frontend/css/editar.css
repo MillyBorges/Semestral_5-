@@ -1,0 +1,210 @@
+/* =Zera margens e define fonte padrão */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f5f2e9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #444;
+    min-height: 100vh; /* Garante altura total da tela */
+    display: flex;
+    flex-direction: column; /* Organiza: Header > Container > Footer */
+}
+
+/* =Links padrão (tira o sublinhado azul feio) */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   ESTRUTURA PRINCIPAL (LAYOUT)
+   ========================================= */
+
+/* Container que segura a Sidebar e o Conteúdo Principal */
+.container {
+    display: flex; /* Coloca Sidebar ao lado do Main */
+    flex: 1;       /* Faz o container crescer para ocupar o espaço vazio */
+    width: 100%;
+    position: relative;
+}
+
+/* Barra Lateral (Sidebar) */
+.sidebar {
+    width: 250px;
+    background: #f8f5e7;
+    border-right: 2px solid #d4e9c7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    flex-shrink: 0; /* Impede a sidebar de encolher */
+}
+
+/* Itens da Sidebar (Copiado do seu padrão) */
+.sidebar-item {
+    padding: 15px 25px;
+    transition: background 0.3s;
+}
+.sidebar-item:hover, .sidebar-item.active {
+    background: #e9f5e1;
+    border-right: 4px solid #6a8e6b;
+}
+.sidebar-item a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #556b2f;
+    font-weight: 500;
+}
+.sidebar-item i {
+    width: 20px;
+    text-align: center;
+}
+
+/* =========================================
+   ÁREA DO FORMULÁRIO (CENTRALIZADO)
+   ========================================= */
+
+.main-content {
+    flex: 1; /* Ocupa todo o espaço restante da tela */
+    display: flex;
+    justify-content: center; /* Centraliza Horizontalmente (Esquerda/Direita) */
+    align-items: center;     /* Centraliza Verticalmente (Cima/Baixo) */
+    padding: 40px;
+    background-color: #f5f2e9;
+}
+
+/* O Cartão Branco do Formulário */
+.editar-card {
+    background: #f8f5e7;
+    width: 100%;
+    max-width: 450px; /* Largura ideal para não ficar muito largo */
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #d4e9c7;
+    box-shadow: 0 10px 25px rgba(106, 142, 107, 0.15); /* Sombra suave */
+}
+
+.editar-card h2 {
+    color: #6a8e6b;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #dde5cf;
+    padding-bottom: 15px;
+}
+
+/* =========================================
+   ESTILOS DOS INPUTS E BOTÃO
+   ========================================= */
+
+#form-editar {
+    display: flex;
+    flex-direction: column; /* Garante um campo em cima do outro */
+    gap: 15px; /* Espaço entre os campos */
+}
+
+.form-group {
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #556b2f;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c9dab0;
+    border-radius: 10px;
+    background: #fff;
+    font-size: 1rem;
+    color: #444;
+    font-family: inherit;
+    box-sizing: border-box; /* Importante: Mantém o padding dentro da largura */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #6a8e6b;
+    box-shadow: 0 0 0 3px rgba(106, 142, 107, 0.2);
+}
+
+/* Botão Salvar */
+.btn-salvar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+    background: linear-gradient(135deg, #6a8e6b 0%, #5a8e6b 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-salvar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(90, 142, 107, 0.3);
+    background: linear-gradient(135deg, #5a8e6b 0%, #4a6b4a 100%);
+}
+
+/* =========================================
+   RODAPÉ (FOOTER)
+   ========================================= */
+
+.footer {
+    background-color: #f8f5e7;
+    border-top: 2px solid #d4e9c7;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: auto; /* Empurra o footer para o final */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    color: #6a8e6b;
+    font-size: 0.9rem;
+}
+
+.footer a:hover {
+    color: #345d29;
+    text-decoration: underline;
+}
+
+/* =========================================
+   RESPONSIVIDADE (CELULAR)
+   ========================================= */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Sidebar vai para cima no celular */
+    }
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid #d4e9c7;
+        padding: 10px 0;
+    }
+    .sidebar-top {
+        display: flex;
+        overflow-x: auto; /* Permite rolar os ícones horizontalmente */
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .editar-card {
+        padding: 25px;
+    }
+}
