@@ -1,5 +1,0 @@
-document.getElementById("edit-titulo")
-document.getElementById("edit-autor")
-document.getElementById("edit-categoria")
-document.getElementById("edit-imagem")
-document.getElementById("edit-descricao")
